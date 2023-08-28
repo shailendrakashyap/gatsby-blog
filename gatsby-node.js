@@ -7,6 +7,7 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
+
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   createPage({
@@ -14,5 +15,18 @@ exports.createPages = async ({ actions }) => {
     component: require.resolve("./src/templates/using-dsg.js"),
     context: {},
     defer: true,
+  })
+}
+
+
+const path = require("path")
+
+// For absolute imports
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    },
   })
 }
