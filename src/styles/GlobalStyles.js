@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     body{
         background: {props => props.theme.colors.background};
         color: {props => props.theme.colors.textsecondary};
+        font-family: 'Nunito Regular', Helvetica, Arial, sans-serif;
         margin: 0;
         padding: 0 20px 80px 20px;
         transition: all 0.5s ease;
@@ -58,12 +59,15 @@ export const GlobalStyles = createGlobalStyle`
     }
     h3{
         font-size: 1.2rem;
-        margin: 30px 0;
+        margin: 30px 0 -15px 0;
         text-transform: uppercase;
         letter-spacing: 2px;
 
         @media screen and (min-width: 768px){
             font-size: 1.5rem;
         }
+    }
+    a{
+        text-decoration: none;
     }
 `
