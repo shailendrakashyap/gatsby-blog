@@ -31,4 +31,29 @@ export const GlobalStyles = createGlobalStyle`
         max-width: 960px;
         margin: 40px auto;
     }
+    h1,h2,h3,h4,h5,h6{
+        color: {props => props.theme.colors.text};
+        font-family: 'Nunito Black', sans-serif;
+        transition: all 0.5s ease;
+        letter-spacing: 1px;
+    }
+    p{
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+
+        @media screen and (min-width: 768px){
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+    }
+    h2{
+        font-size: 1.5rem;
+        margin: 30px 0;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        @media screen and (min-width: 768px){
+            font-size: 2rem;
+        }
+    }
 `
