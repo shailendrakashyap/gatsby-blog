@@ -10,16 +10,18 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Nunito Regular';
         src: local('Nunito Regular'), local('NunitoRegular'),
         url(${NunitoRegular}) format('ttf'),
-        url(${NunitoBlack}) format('ttf');
         font-weight: 300;
         font-style: normal;
     }
     @font-face {
-        font-family: 'Nunito Regular';
-        src: local('Nunito Regular'), local('NunitoRegular'),
-
+        font-family: 'Nunito Black';
+        src: local('Nunito Black'), local('NunitoBlack'),
         url(${NunitoBlack}) format('ttf');
         font-weight: 300;
         font-style: normal;
+    }
+    body{
+        background: {props => props.theme.colors.background};
+        }
     }
 `
