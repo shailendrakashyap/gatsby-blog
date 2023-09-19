@@ -56,4 +56,14 @@ export const GlobalStyles = createGlobalStyle`
             font-size: 2rem;
         }
     }
+    h3{
+        font-size: 0.8rem;
+        margin: 30px 0;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        @media screen and (min-width: 768px){
+            font-size: 2rem;
+        }
+    }
 `
