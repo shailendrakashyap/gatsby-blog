@@ -22,6 +22,13 @@ export const GlobalStyles = createGlobalStyle`
     }
     body{
         background: {props => props.theme.colors.background};
-        }
+        color: {props => props.theme.colors.textsecondary};
+        margin: 0;
+        padding: 0 20px 80px 20px;
+        transition: all 0.5s ease;
+    }
+    main{
+        max-width: 960px;
+        margin: 40px auto;
     }
 `
